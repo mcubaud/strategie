@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=fr dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Stratégie</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   <style>
+    #mapid {height:580px ;}
+  </style>
+  <link rel="stylesheet" href="strategie.css"/>
+  </head>
+<body>
+  <header>
+    <h1>Jeu de Stratégie</h1>
+    <div id="boutons">
+      <div id="barre_volume">
+        <p>Volume</p>
+        <meter id="volume" min=0 max=100 low=10 high=60 value=100 optimum=70></meter>
+      </div>
+      <button id="Quitter">Quitter</button>
+    </div>
+  </header>
+  <div id="ecran_du_jeu">
+    <div id="mapid"></div>
+    <div id="inventaire">
+      <button id="base" class="boutons_batiments">base</button>
+      <button id="scierie" class="boutons_batiments">scierie</button>
+      <button id="mine" class="boutons_batiments">mine</button>
+      <button id="ferme" class="boutons_batiments">ferme</button>
+    </div>
+    <div>
+      <form action="" method="get" id="codes"></form>
+    </div>
+    <div id="infos_unite">
+        <h2>infos joueur</h2>
+        <p id="score">score : 0</p>
+        <p id="nourriture">nourriture : 0</p>
+        <p id="bois">bois : 0</p>
+        <p id="or">or : 0</p>
+        <h2>infos unité</h2>
+        <div id="caracteristiques"></div>
+        <div id="actions"></div>
+      </div>
+  </div>
+<audio id="music" src="audio/Age of Empires 3 Soundtrack - 03 Get Off My Band.mp3" preload="auto"></audio>
+<audio id="combat" src="audio/AoE3_combat.mp3" preload="auto"></audio>
+
+
+<script src="strategie.js"></script>
+
+</body>
+</html>

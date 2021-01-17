@@ -1,0 +1,191 @@
+body {
+    background-color: gainsboro;
+}
+
+h1 {
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0px;
+    
+}
+
+header {
+    background-color: ivory;
+    display: grid;
+    grid-template-columns: 5% 1fr 25%;
+    grid-template-rows: 1fr;
+}
+
+#blason{
+    grid-row: 1;
+    grid-column: 1;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+#blason2{
+    margin-top: 4px;
+    margin-right: 5px;
+}
+.blasons{
+    height: 50px;
+    transform: rotateY(0deg);
+    transition: transform 1s;
+}
+
+.blasons:hover{
+    transform: rotateY(180deg);
+    transition: transform 1s;
+}
+
+
+button{
+    margin: 10px;
+    padding: 5px 10px;
+    color: #eee;
+    border-radius: 4px;
+    background-color:  #636363 ;
+    background-image: linear-gradient(#ffffff, #000000 50%, transparent 50%);
+    box-shadow: 0 1px 0 rgba(255,255,255,.1),
+                0 0 1px 1px rgba(255,255,255,.3) inset,
+                0 1px rgba(255,255,255,.4) inset;
+    border: 1px solid black;
+    text-shadow: 0 1px 1px rgba(0,0,0,.8);
+    outline:none;
+}
+
+button:hover, button:focus {
+    color: white;
+    background-color: #7f7985;
+    box-shadow: 0 1px 0 rgba(255,255,255,.1),
+                0 0 1px 1px rgba(255,255,255,.3) inset,
+                0 1px rgba(255,255,255,.4) inset,
+                0 0 5px rgb(0, 47, 255);
+    border-color: rgba(255, 255, 255, .2);
+}
+
+ button:active {
+    background-color: #2624bf;
+    box-shadow: 0 1px 2px rgba(0,0,0,.6) inset,
+                0 1px 0 rgba(255,255,255,.3);
+    border: 1px solid black;
+}
+
+
+#ecran_du_jeu{
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    grid-template-rows: 90% 1fr;
+}
+
+#mapid{
+    grid-row: 1;
+    grid-column: 1;
+    border: 1px solid black;
+}
+
+#infos_unite{
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(131, 131, 131, 0.281);
+}
+#infos_unite h2{
+    margin:5px 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: cornsilk;
+}
+
+#inventaire{
+    height: 45px;
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    background-color: rgba(131, 131, 131, 0.281);
+    border: 1px solid black;
+}
+
+
+#volume{
+    height: 20px;
+    width: 120px;
+    border: 1px solid blue;
+    border-radius: 4px;
+}
+#volume:hover{
+    border: 2px solid blue;
+}
+
+#barre_volume p{
+    margin: 0px 0px;
+    font-size:0.9em;
+}
+
+#boutons{
+    grid-row: 1;
+    grid-column: 3;
+    display:flex;
+    justify-content: space-evenly;
+}
+.popup_enigmes{
+    margin: 0px 0px;
+}
+
+@media (max-width: 1345px){
+    #blason2{
+        height: 0px;
+    }
+    #volume{
+        width: 90%;
+    }
+}
+@media (max-width: 1282px){  
+    #mapid{
+        min-height: 580px;
+        height: auto;
+    }
+    #inventaire{
+        min-height: 45px;
+        height: auto;
+    }  
+}
+@media (max-width: 719px){
+    #blason{
+        height: 0px;
+    }
+    #volume{
+        width: 90%;
+    }
+}
+@media (max-width: 600px){
+    #volume{
+        width:0px;
+        border: 0px;
+    }
+    #quitter{
+        width: 0px;
+    }
+    #barre_volume p{
+        font-size: 0em;
+    }
+    button{
+        padding: 0px;
+    }
+}
+@media (max-width: 390px){
+    h1{
+        font-size: 0em;
+    }
+    #boutons{
+        grid-column: 1 / span 3;
+    }
+    button{
+        padding: 5px 10px;
+    }
+    
+}
