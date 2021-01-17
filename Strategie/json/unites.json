@@ -1,0 +1,83 @@
+{
+    "base":{
+        "pv":1000,
+        "vitesse":0,
+        "attaque":100,
+        "portee":0.0003,
+        "portee_vue":0.0005,
+        "type":"building",
+        "classe":"base",
+        "boutons":["boutons_creer_soldats","bouton_creer_archer"],
+        "noms_boutons":["soldat","archer"],
+        "wood_production":0,
+        "food_production":0,
+        "gold_production":0,
+        "image": "caserne"
+    },
+    "scierie":{
+        "pv":500,
+        "vitesse":0,
+        "attaque":0,
+        "portee":0.0005,
+        "portee_vue":0.0005,
+        "type":"building",
+        "classe":"scierie",
+        "boutons":["bouton_ameliorer_production"],
+        "noms_boutons":["Améliorer"],
+        "wood_production":1,
+        "food_production":0,
+        "gold_production":0,
+        "image": "scierie"
+        },
+    "mine":{
+        "pv":500,
+        "vitesse":0,
+        "attaque":0,
+        "portee":0.0005,
+        "portee_vue":0.0005,
+        "type":"building",
+        "classe":"mine",
+        "boutons":["bouton_ameliorer_production"],
+        "noms_boutons":["Améliorer"],
+        "wood_production":0,
+        "food_production":0,
+        "gold_production":1,
+        "image": "mine"
+        },
+    "ferme":{
+        "pv":500,
+        "vitesse":0,
+        "attaque":0,
+        "portee":0.0005,
+        "portee_vue":0.0005,
+        "type":"building",
+        "classe":"ferme",
+        "boutons":["bouton_ameliorer_production"],
+        "noms_boutons":["Améliorer"],
+        "wood_production":0,
+        "food_production":1,
+        "gold_production":0,
+        "image": "ferme"
+    },
+
+    "soldat":{
+        "pv":100,
+        "vitesse":0.0001,
+        "portee":0.0005,
+        "attaque":10,
+        "type":"unit",
+        "classe":"soldat",
+        "portee_vue":0.003,
+        "image": "templier"
+    },
+    "archer":{
+        "pv":50,
+        "vitesse":0.0001,
+        "portee":0.002,
+        "attaque":10,
+        "type":"unit",
+        "classe":"archer",
+        "portee_vue":0.004,
+        "image": "archer"
+    }
+}

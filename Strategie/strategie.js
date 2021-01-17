@@ -15,14 +15,14 @@ Icone = L.Icon.extend({
 });
 
 //Récupération des objets sur le serveur
-var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var requestURL = 'https://github.com/mcubaud/strategie/tree/main/Strategie/json/unites.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 request.onload = function() {
-    var superHeroes = request.response;
-    console.log(superHeroes);
+    var unites = request.response;
+    console.log(unites);
 }
 
 
